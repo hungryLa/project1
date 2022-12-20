@@ -12,10 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    dd('cf');
-});
+use App\Http\Controllers\MainController;
+Route::get('/', [MainController::class,'index'])->name('main.index');
 
 Auth::routes();
 
